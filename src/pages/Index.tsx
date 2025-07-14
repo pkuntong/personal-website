@@ -25,8 +25,7 @@ const Index = () => {
                 <div className="grid md:grid-cols-1 gap-8 items-center">
                   <div className="text-center">
                     <p className="text-gray-600 leading-relaxed mb-6 text-lg">
-                      Hi! My name is Pau Kuntong and I am a Full-Stack Software Engineer based in Washington DC area. 
-                      When I'm not coding, you can find me playing PS5, with my Kids or Playing Soccer with them.
+                      Hi! My name is Pau Kuntong and Software Engineer. 
                     </p>
                     <p className="text-gray-600 leading-relaxed mb-8 text-lg">
                     </p>
