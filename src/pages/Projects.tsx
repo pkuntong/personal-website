@@ -16,9 +16,6 @@ const Projects = () => {
               <h1 className="text-3xl font-bold mb-6">Projects</h1>
               <div className="text-gray-300 leading-relaxed space-y-6 text-lg">
                 <div className="mb-6">
-                  <p className="mb-4">
-                    A simple, effective affiliate marketing website focused on coffee equipment. Built with pure HTML/CSS/JS - no frameworks, no hosting costs, no upfront investment.
-                  </p>
                   <a
                     href="https://bestlistbay.com/"
                     target="_blank"
