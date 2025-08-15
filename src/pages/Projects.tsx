@@ -14,18 +14,58 @@ const Projects = () => {
           <div className="flex-1 flex flex-col justify-center items-center p-8">
             <div className="max-w-2xl w-full text-center">
               <h1 className="text-3xl font-bold mb-6">Projects</h1>
-              <div className="text-gray-300 leading-relaxed space-y-4 text-lg">
-                <p className="mb-6">
-                  A simple, effective affiliate marketing website focused on coffee equipment. Built with pure HTML/CSS/JS - no frameworks, no hosting costs, no upfront investment.
-                </p>
-                <a
-                  href="https://bestlistbay.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block text-blue-600 hover:text-blue-800 underline font-medium"
-                >
-                  View Coffee Equipment Site &rarr;
-                </a>
+              <div className="text-gray-300 leading-relaxed space-y-6 text-lg">
+                <div className="mb-6">
+                  <p className="mb-4">
+                    A simple, effective affiliate marketing website focused on coffee equipment. Built with pure HTML/CSS/JS - no frameworks, no hosting costs, no upfront investment.
+                  </p>
+                  <a
+                    href="https://bestlistbay.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block text-blue-600 hover:text-blue-800 underline font-medium"
+                  >
+                    View Coffee Equipment Site &rarr;
+                  </a>
+                </div>
+                
+                <div className="space-y-4">
+                  <a
+                    href="https://highlanderhomes.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-blue-600 hover:text-blue-800 underline font-medium"
+                  >
+                    Highlander Homes &rarr;
+                  </a>
+                  
+                  <a
+                    href="https://www.gifttracker.cc/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-blue-600 hover:text-blue-800 underline font-medium"
+                  >
+                    Gift Tracker &rarr;
+                  </a>
+                  
+                  <a
+                    href="https://www.livyflow.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-blue-600 hover:text-blue-800 underline font-medium"
+                  >
+                    LivyFlow &rarr;
+                  </a>
+                  
+                  <a
+                    href="https://pkuntong.github.io/news-explorer-frontend/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-blue-600 hover:text-blue-800 underline font-medium"
+                  >
+                    News Explorer Frontend &rarr;
+                  </a>
+                </div>
               </div>
             </div>
           </div>
