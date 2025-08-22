@@ -58,6 +58,15 @@ const Projects = () => {
                 >
                   News Explorer Frontend &rarr;
                 </a>
+                
+                <a
+                  href="https://www.smartinvoiceextract.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-blue-600 hover:text-blue-800 underline font-medium"
+                >
+                  PDF Extractor Pro &rarr;
+                </a>
               </div>
             </div>
           </div>
