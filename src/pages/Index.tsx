@@ -23,11 +23,18 @@ const Index = () => {
             <section id="about" className="w-full">
               <div className="mx-auto">
                 <div className="grid md:grid-cols-1 gap-8 items-center">
-                  <div className="text-center">
-                    <p className="text-white leading-relaxed mb-6 text-lg">
-                      Hi! My name is Pau Kuntong and Software Engineer. 
+                  <div className="text-left max-w-3xl">
+                    <p className="text-gray-300 leading-relaxed mb-4 text-base">
+                      Hey, I'm Pau Kuntong — a Full-Stack Software Engineer based in the Washington, DC area.
                     </p>
-                    <p className="text-white leading-relaxed mb-8 text-lg">
+                    <p className="text-gray-300 leading-relaxed mb-4 text-base">
+                      I've spent the last few years diving deep into coding, picking up skills in JavaScript, React, and backend development along the way. These days, I'm building websites, experimenting with new ideas, and always finding something new to learn.
+                    </p>
+                    <p className="text-gray-300 leading-relaxed mb-4 text-base">
+                      Right now, I'm really enjoying the creative side of coding — making projects that are fun, practical, and sometimes just for the vibes.
+                    </p>
+                    <p className="text-gray-300 leading-relaxed mb-6 text-base">
+                      When I'm not glued to my screen, I'm usually exploring, tinkering, or chasing whatever sparks my curiosity next.
                     </p>
                   </div>
                 </div>

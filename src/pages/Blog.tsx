@@ -13,7 +13,7 @@ const Blog = () => {
             <Link to="/projects" className="block w-full text-left mb-4 font-medium">projects</Link>
           </div>
           <div className="flex-1 flex flex-col justify-center items-center p-8">
-            <div className="max-w-2xl w-full" style={{ fontFamily: "'Indie Flower', cursive" }}>
+            <div className="max-w-3xl w-full">
               <h1
                 className="text-3xl font-bold mb-6 text-center cursor-pointer hover:underline"
                 onClick={() => setShowContent((v) => !v)}
