@@ -9,6 +9,10 @@ const Index = () => {
     setIsLoaded(true);
   }, []);
 
+  const copyEmail = () => {
+    navigator.clipboard.writeText('kuntong.p@gmail.com');
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-black text-white">
       <div className="flex-1 flex justify-center items-center w-full px-4">
@@ -57,6 +61,9 @@ const Index = () => {
             <a href="https://github.com/pkuntong" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
               <Github className="h-6 w-6" />
             </a>
+            <button onClick={copyEmail} className="text-gray-400 hover:text-white transition-colors">
+              <Mail className="h-6 w-6" />
+            </button>
           </div>
         </div>
       </footer>
