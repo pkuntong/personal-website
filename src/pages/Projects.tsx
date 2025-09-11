@@ -1,19 +1,22 @@
 import { Link } from "react-router-dom";
+import { useTheme } from "@/contexts/ThemeContext";
 
 const Projects = () => {
+  const { themeClasses } = useTheme();
+  
   return (
-    <div className="min-h-screen flex flex-col bg-black text-white">
+    <div className={`min-h-screen flex flex-col ${themeClasses.bg} ${themeClasses.text}`}>
       <div className="flex-1 flex justify-center items-center w-full px-4">
         <div className="flex max-w-4xl w-full shadow-md rounded-lg overflow-hidden">
-          <div className="w-48 bg-black p-6 flex flex-col items-start border-r border-gray-800">
-            <a href="/#about" className="block w-full text-left mb-4 font-medium">about</a>
-            <Link to="/blog" className="block w-full text-left mb-4 font-medium">blog</Link>
+          <div className={`w-48 ${themeClasses.bg} p-6 flex flex-col items-start border-r ${themeClasses.border}`}>
+            <a href="/#about" className="block w-full text-left mb-4 font-medium">about me</a>
+            {/* <Link to="/blog" className="block w-full text-left mb-4 font-medium">blog</Link> */}
             <Link to="/projects" className="block w-full text-left mb-4 font-medium">projects</Link>
           </div>
           <div className="flex-1 p-8">
             <div className="max-w-3xl">
               <h1 className="text-3xl font-bold mb-8">Projects</h1>
-              <div className="text-gray-300 leading-relaxed space-y-6 text-base">
+              <div className={`${themeClasses.textSecondary} leading-relaxed space-y-6 text-base`}>
                 <p>
                   Over the past years, I've been working on various projects, from web applications to innovative tools, 
                   each designed to solve real-world problems and improve user experiences.
@@ -27,7 +30,7 @@ const Projects = () => {
                         href="https://bestlistbay.com/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white hover:text-gray-300 underline font-medium"
+                        className={`${themeClasses.text} hover:${themeClasses.textSecondary} underline font-medium`}
                       >
                         Best List Bay
                       </a>{' '}
@@ -43,7 +46,7 @@ const Projects = () => {
                         href="https://highlanderhomes.org/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white hover:text-gray-300 underline font-medium"
+                        className={`${themeClasses.text} hover:${themeClasses.textSecondary} underline font-medium`}
                       >
                         Highlander Homes
                       </a>{' '}
@@ -60,7 +63,7 @@ const Projects = () => {
                         href="https://www.gifttracker.cc/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white hover:text-gray-300 underline font-medium"
+                        className={`${themeClasses.text} hover:${themeClasses.textSecondary} underline font-medium`}
                       >
                         Gift Tracker
                       </a>{' '}
@@ -76,7 +79,7 @@ const Projects = () => {
                         href="https://www.livyflow.com/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white hover:text-gray-300 underline font-medium"
+                        className={`${themeClasses.text} hover:${themeClasses.textSecondary} underline font-medium`}
                       >
                         LivyFlow
                       </a>{' '}
@@ -93,7 +96,7 @@ const Projects = () => {
                         href="https://pkuntong.github.io/news-explorer-frontend/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white hover:text-gray-300 underline font-medium"
+                        className={`${themeClasses.text} hover:${themeClasses.textSecondary} underline font-medium`}
                       >
                         News Explorer Frontend
                       </a>{' '}
@@ -109,7 +112,7 @@ const Projects = () => {
                         href="https://www.smartinvoiceextract.com/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white hover:text-gray-300 underline font-medium"
+                        className={`${themeClasses.text} hover:${themeClasses.textSecondary} underline font-medium`}
                       >
                         PDF Extractor Pro
                       </a>{' '}
@@ -121,13 +124,13 @@ const Projects = () => {
                 </div>
 
                 <div className="pt-4">
-                  <p className="text-sm text-gray-400">
+                  <p className={`text-sm ${themeClasses.textMuted}`}>
                     My other projects can be found on{' '}
                     <a 
                       href="https://github.com/pkuntong" 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="text-white hover:text-gray-300 underline"
+                      className={`${themeClasses.text} hover:${themeClasses.textSecondary} underline`}
                     >
                       GitHub
                     </a>
