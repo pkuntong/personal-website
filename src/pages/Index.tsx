@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Mail, Github, Linkedin, Twitter, Menu, X, Sun, Moon } from "lucide-react";
-import { Link } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useTheme } from "@/contexts/ThemeContext";
 
@@ -33,9 +32,7 @@ const Index = () => {
           {mobileMenuOpen && (
             <div className={`absolute top-full left-0 right-0 ${themeClasses.bg} ${themeClasses.border} border-b px-4 py-3`}>
               <nav className="flex flex-col space-y-3">
-                <a href="#about" className="py-3 text-left font-medium touch-manipulation" onClick={() => setMobileMenuOpen(false)}>about me</a>
                 {/* <Link to="/blog" className="py-3 text-left font-medium touch-manipulation" onClick={() => setMobileMenuOpen(false)}>blog</Link> */}
-                <Link to="/projects" className="py-3 text-left font-medium touch-manipulation" onClick={() => setMobileMenuOpen(false)}>projects</Link>
               </nav>
             </div>
           )}
@@ -98,9 +95,7 @@ const Index = () => {
           {/* Desktop Sidebar */}
           {!isMobile && (
             <div className={`w-48 ${themeClasses.bg} p-6 flex flex-col items-start border-r ${themeClasses.border}`}>
-              <a href="#about" className="block w-full text-left mb-4 font-medium">about me</a>
               {/* <Link to="/blog" className="block w-full text-left mb-4 font-medium">blog</Link> */}
-              <Link to="/projects" className="block w-full text-left mb-4 font-medium">projects</Link>
             </div>
           )}
           
