@@ -8,10 +8,6 @@ const Index = () => {
   const isMobile = useIsMobile();
   const { isDarkMode, toggleTheme, themeClasses } = useTheme();
 
-  const copyEmail = () => {
-    navigator.clipboard.writeText('kuntong.p@gmail.com');
-  };
-
   return (
     <div className={`min-h-screen flex flex-col ${themeClasses.bg} ${themeClasses.text}`}>
       {/* Mobile Header */}
@@ -27,7 +23,7 @@ const Index = () => {
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
-          
+
           {/* Mobile Menu Overlay */}
           {mobileMenuOpen && (
             <div className={`absolute top-full left-0 right-0 ${themeClasses.bg} ${themeClasses.border} border-b px-4 py-3`}>
@@ -43,44 +39,44 @@ const Index = () => {
       <div className={`w-full ${themeClasses.bg} ${themeClasses.border} border-b py-4`}>
         <div className="max-w-4xl mx-auto px-4 flex justify-between items-center">
           <div className={`flex items-center ${isMobile ? 'space-x-4' : 'space-x-6'}`}>
-            <a 
-              href="https://x.com/gnotnuk" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://x.com/gnotnuk"
+              target="_blank"
+              rel="noopener noreferrer"
               className={`${themeClasses.textMuted} hover:${themeClasses.text} transition-colors p-2 touch-manipulation`}
               aria-label="Twitter"
             >
               <Twitter className={`${isMobile ? 'h-5 w-5' : 'h-6 w-6'}`} />
             </a>
-            <a 
-              href="https://www.linkedin.com/in/paukuntong/" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://www.linkedin.com/in/paukuntong/"
+              target="_blank"
+              rel="noopener noreferrer"
               className={`${themeClasses.textMuted} hover:${themeClasses.text} transition-colors p-2 touch-manipulation`}
               aria-label="LinkedIn"
             >
               <Linkedin className={`${isMobile ? 'h-5 w-5' : 'h-6 w-6'}`} />
             </a>
-            <a 
-              href="https://github.com/pkuntong" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://github.com/pkuntong"
+              target="_blank"
+              rel="noopener noreferrer"
               className={`${themeClasses.textMuted} hover:${themeClasses.text} transition-colors p-2 touch-manipulation`}
               aria-label="GitHub"
             >
               <Github className={`${isMobile ? 'h-5 w-5' : 'h-6 w-6'}`} />
             </a>
-            <button 
-              onClick={copyEmail} 
+            <a
+              href="mailto:hey@paukuntong.xyz"
               className={`${themeClasses.textMuted} hover:${themeClasses.text} transition-colors p-2 touch-manipulation`}
-              aria-label="Copy email"
+              aria-label="Send email"
             >
               <Mail className={`${isMobile ? 'h-5 w-5' : 'h-6 w-6'}`} />
-            </button>
+            </a>
           </div>
-          
+
           {/* Theme Toggle */}
-          <button 
+          <button
             onClick={toggleTheme}
             className={`${themeClasses.textMuted} hover:${themeClasses.text} transition-colors p-2 touch-manipulation`}
             aria-label="Toggle theme"
@@ -98,7 +94,7 @@ const Index = () => {
               {/* <Link to="/blog" className="block w-full text-left mb-4 font-medium">blog</Link> */}
             </div>
           )}
-          
+
           <div className={`flex-1 flex flex-col justify-center items-center ${isMobile ? 'p-4' : 'p-8'}`}>
             {/* About Section */}
             <section id="about" className="w-full">
@@ -106,9 +102,9 @@ const Index = () => {
                 <div className="grid md:grid-cols-1 gap-8 items-center">
                   <div className="text-left max-w-3xl">
                     <div className="flex flex-col md:flex-row items-start gap-6 mb-6">
-                      <img 
-                        src="/profile.jpeg" 
-                        alt="Pau Kuntong" 
+                      <img
+                        src="/profile.jpeg"
+                        alt="Pau Kuntong"
                         className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover flex-shrink-0"
                       />
                       <div className="flex-1">
