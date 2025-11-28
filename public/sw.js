@@ -1,4 +1,4 @@
-const CACHE_NAME = 'pau-kuntong-v1';
+const CACHE_NAME = 'pau-kuntong-v2';
 const urlsToCache = [
   '/',
   '/blog',
@@ -25,7 +25,7 @@ self.addEventListener('fetch', (event) => {
         }
         return fetch(event.request);
       }
-    )
+      )
   );
 });
 
