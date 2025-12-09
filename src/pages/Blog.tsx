@@ -9,9 +9,9 @@ const Blog = () => {
       <div className="flex-1 flex justify-center items-center w-full px-4">
         <div className="flex max-w-4xl w-full shadow-md rounded-lg overflow-hidden">
           <div className={`w-48 ${themeClasses.bg} p-6 flex flex-col items-start border-r ${themeClasses.border}`}>
-            <a href="/#about" className="block w-full text-left mb-4 font-medium">about me</a>
+            <Link to="/" className="block w-full text-left mb-4 font-medium">home</Link>
+            <Link to="/apps" className="block w-full text-left mb-4 font-medium">apps</Link>
             {/* <Link to="/blog" className="block w-full text-left mb-4 font-medium">blog</Link> */}
-            <Link to="/projects" className="block w-full text-left mb-4 font-medium">projects</Link>
           </div>
           <div className="flex-1 p-8">
             <div className="max-w-3xl">
