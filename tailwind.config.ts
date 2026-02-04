@@ -20,7 +20,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['Inter', 'system-ui', 'sans-serif'],
+				sans: ['\"Space Grotesk\"', 'sans-serif'],
+				serif: ['\"Newsreader\"', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

@@ -1,29 +1,25 @@
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
-import { useTheme } from "@/contexts/ThemeContext";
+import { Link } from "react-router-dom";
+import SiteLayout from "@/components/SiteLayout";
 
-const NotFound = () => {
-  const location = useLocation();
-  const { themeClasses } = useTheme();
-
-  useEffect(() => {
-    console.error(
-      "404 Error: User attempted to access non-existent route:",
-      location.pathname
-    );
-  }, [location.pathname]);
-
-  return (
-    <div className={`min-h-screen flex items-center justify-center ${themeClasses.bg}`}>
-      <div className="text-center">
-        <h1 className={`text-4xl font-bold mb-4 ${themeClasses.text}`}>404</h1>
-        <p className={`text-xl mb-4 ${themeClasses.textSecondary}`}>Oops! Page not found</p>
-        <a href="/" className={`${themeClasses.text} hover:${themeClasses.textSecondary} underline`}>
-          Return to Home
-        </a>
-      </div>
-    </div>
-  );
-};
+const NotFound = () => (
+  <SiteLayout>
+    <section className="space-y-4 animate-fade-up">
+      <p className="text-xs uppercase tracking-[0.32em] text-muted">404</p>
+      <h1 className="font-serif text-3xl tracking-tight md:text-4xl">
+        Page not found
+      </h1>
+      <p className="text-sm text-muted">
+        The page you are looking for does not exist. The home page should get
+        you back on track.
+      </p>
+      <Link
+        to="/"
+        className="text-sm font-medium text-accent transition-colors hover:text-ink"
+      >
+        Return home
+      </Link>
+    </section>
+  </SiteLayout>
+);
 
 export default NotFound;
