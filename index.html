@@ -33,17 +33,22 @@
   </head>
   <body>
     <div id="root"></div>
-    <!-- Service Worker Registration -->
+    <!-- One-time cleanup for previously registered service workers -->
     <script>
       if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
-            .then((registration) => {
-              console.log('SW registered: ', registration);
-            })
-            .catch((registrationError) => {
-              console.log('SW registration failed: ', registrationError);
-            });
+        window.addEventListener('load', async () => {
+          const cleanupKey = 'sw-cleanup-v1';
+          if (localStorage.getItem(cleanupKey)) return;
+
+          const registrations = await navigator.serviceWorker.getRegistrations();
+          await Promise.all(registrations.map((registration) => registration.unregister()));
+
+          if ('caches' in window) {
+            const cacheKeys = await caches.keys();
+            await Promise.all(cacheKeys.map((cacheKey) => caches.delete(cacheKey)));
+          }
+
+          localStorage.setItem(cleanupKey, 'done');
         });
       }
     </script>
