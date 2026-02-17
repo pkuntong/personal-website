@@ -9,11 +9,6 @@ const focusAreas = [
 
 const selectedWork = [
   {
-    name: "Best List Bay",
-    url: "https://bestlistbay.com/",
-    description: "Curated lists platform with a clean, browseable UX.",
-  },
-  {
     name: "Highlander Homes",
     url: "https://highlanderhomes.org/",
     description: "Real estate listings with search, maps, and fast filters.",

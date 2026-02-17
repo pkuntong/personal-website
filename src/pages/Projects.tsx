@@ -59,23 +59,6 @@ const Projects = () => {
                 <div className="space-y-6">
                   <div>
                     <p className={isMobile ? 'text-sm' : ''}>
-                      I created{' '}
-                      <a
-                        href="https://bestlistbay.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`${themeClasses.text} hover:${themeClasses.textSecondary} underline font-medium touch-manipulation`}
-                      >
-                        Best List Bay
-                      </a>{' '}
-                      as a comprehensive platform for discovering and sharing curated lists. 
-                      The application features a clean, modern interface built with React and focuses on 
-                      providing users with organized, high-quality content recommendations across various categories.
-                    </p>
-                  </div>
-
-                  <div>
-                    <p className={isMobile ? 'text-sm' : ''}>
                       <a
                         href="https://highlanderhomes.org/"
                         target="_blank"
