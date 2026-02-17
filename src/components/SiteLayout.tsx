@@ -63,7 +63,7 @@ const SiteLayout = ({ children }: { children: ReactNode }) => {
 
         <footer className="mt-14 flex flex-col gap-2 border-t border-ink pt-6 text-xs text-muted md:flex-row md:items-center md:justify-between">
           <span>(c) {year} Pau Kuntong</span>
-          <span>Minimal, hand-built with React and Vite.</span>
+          <span>Rushing is the enemy of perfection - Rickson Gracie</span>
         </footer>
       </div>
     </div>
