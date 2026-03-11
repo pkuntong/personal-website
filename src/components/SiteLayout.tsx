@@ -18,30 +18,6 @@ const HomeIcon = ({ className = "" }: IconProps) => (
   </svg>
 );
 
-const ResumeIcon = ({ className = "" }: IconProps) => (
-  <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
-    <circle cx="12" cy="8" r="3.2" stroke="currentColor" strokeWidth="1.8" />
-    <path
-      d="M5.5 19.2c1.8-3 4.2-4.5 6.5-4.5s4.7 1.5 6.5 4.5"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-    />
-    <rect x="3.5" y="3.5" width="17" height="17" rx="8.5" stroke="currentColor" strokeWidth="1.2" />
-  </svg>
-);
-
-const ProjectsIcon = ({ className = "" }: IconProps) => (
-  <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
-    <path
-      d="M5 6.5h5.5a2 2 0 0 1 2 2V19H7a2 2 0 0 1-2-2V6.5Zm14 0h-5.5a2 2 0 0 0-2 2V19H17a2 2 0 0 0 2-2V6.5Z"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinejoin="round"
-    />
-  </svg>
-);
-
 const XIcon = ({ className = "" }: IconProps) => (
   <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
     <path
@@ -87,8 +63,6 @@ const LinkedInIcon = ({ className = "" }: IconProps) => (
 
 const navItems = [
   { label: "Home", to: "/", icon: HomeIcon, end: true },
-  { label: "Resume", to: "/resume", icon: ResumeIcon },
-  { label: "Projects", to: "/projects", icon: ProjectsIcon },
 ];
 
 const socialIcons: Record<string, (props: IconProps) => JSX.Element> = {
