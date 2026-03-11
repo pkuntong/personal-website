@@ -1,83 +1,189 @@
-import { ReactNode } from "react";
-import { Link, useLocation } from "react-router-dom";
+import type { JSX, ReactNode } from "react";
+import { NavLink } from "react-router-dom";
 import { socialLinks } from "@/data/siteContent";
 
+type IconProps = {
+  className?: string;
+};
+
+const HomeIcon = ({ className = "" }: IconProps) => (
+  <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+    <path
+      d="M4 11.8 12 5l8 6.8v7.2a1 1 0 0 1-1 1h-4.8v-5.2H9.8V20H5a1 1 0 0 1-1-1v-7.2Z"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const ResumeIcon = ({ className = "" }: IconProps) => (
+  <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+    <circle cx="12" cy="8" r="3.2" stroke="currentColor" strokeWidth="1.8" />
+    <path
+      d="M5.5 19.2c1.8-3 4.2-4.5 6.5-4.5s4.7 1.5 6.5 4.5"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+    />
+    <rect x="3.5" y="3.5" width="17" height="17" rx="8.5" stroke="currentColor" strokeWidth="1.2" />
+  </svg>
+);
+
+const ProjectsIcon = ({ className = "" }: IconProps) => (
+  <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+    <path
+      d="M5 6.5h5.5a2 2 0 0 1 2 2V19H7a2 2 0 0 1-2-2V6.5Zm14 0h-5.5a2 2 0 0 0-2 2V19H17a2 2 0 0 0 2-2V6.5Z"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const BlogIcon = ({ className = "" }: IconProps) => (
+  <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+    <rect x="5" y="4.5" width="14" height="15" rx="2" stroke="currentColor" strokeWidth="1.8" />
+    <path
+      d="M9 9h6M9 12.5h6M9 16h3"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+    />
+  </svg>
+);
+
+const ArtIcon = ({ className = "" }: IconProps) => (
+  <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+    <path
+      d="m6 18 8.8-8.8 3 3L9 21H6v-3ZM14.1 7.1l1.8-1.8a2.2 2.2 0 1 1 3.1 3.1l-1.8 1.8-3.1-3.1Z"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const XIcon = ({ className = "" }: IconProps) => (
+  <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+    <path
+      d="M5 5h3.1l4.2 5.6L17.1 5H19l-5.8 6.7L19.5 19h-3.1l-4.5-6-5.2 6H5l6.1-7L5 5Z"
+      fill="currentColor"
+    />
+  </svg>
+);
+
+const GitHubIcon = ({ className = "" }: IconProps) => (
+  <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+    <path
+      d="M12 4.8a7.2 7.2 0 0 0-2.3 14c.4.1.6-.2.6-.4v-1.5c-2.4.5-2.9-1-2.9-1-.4-.9-1-1.2-1-1.2-.8-.5 0-.5 0-.5.9.1 1.4 1 1.4 1 .8 1.3 2 1 2.5.8.1-.6.3-1 .6-1.3-1.9-.2-3.9-.9-3.9-4.2 0-.9.3-1.7.9-2.3-.1-.2-.4-1.1.1-2.2 0 0 .7-.2 2.4.9a8 8 0 0 1 4.4 0c1.7-1.1 2.4-.9 2.4-.9.5 1.1.2 2 .1 2.2.6.6.9 1.4.9 2.3 0 3.3-2 4-3.9 4.2.3.3.6.8.6 1.6v2.4c0 .2.2.5.6.4A7.2 7.2 0 0 0 12 4.8Z"
+      fill="currentColor"
+    />
+  </svg>
+);
+
+const EmailIcon = ({ className = "" }: IconProps) => (
+  <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+    <rect x="4" y="6" width="16" height="12" rx="2.2" stroke="currentColor" strokeWidth="1.8" />
+    <path
+      d="m5.5 8 6.5 5 6.5-5"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const LinkedInIcon = ({ className = "" }: IconProps) => (
+  <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+    <path
+      d="M7.2 9.3V18M7.2 6.3a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2ZM11.4 18V9.3h3V11c.4-.9 1.4-1.9 3.1-1.9 2.2 0 3.5 1.4 3.5 4.2V18h-3v-4.1c0-1.3-.5-2.1-1.7-2.1-1 0-1.6.7-1.9 1.4-.1.2-.1.5-.1.9V18h-2.9Z"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
 const navItems = [
-  { label: "Projects", href: "/#projects" },
-  { label: "About", href: "/#about" },
-  { label: "Apps", href: "/apps" },
+  { label: "Home", to: "/", icon: HomeIcon, end: true },
+  { label: "Resume", to: "/resume", icon: ResumeIcon },
+  { label: "Projects", to: "/projects", icon: ProjectsIcon },
+  { label: "Blog", to: "/blog", icon: BlogIcon },
+  { label: "Art", to: "/art", icon: ArtIcon },
 ];
 
-const SiteLayout = ({ children }: { children: ReactNode }) => {
-  const location = useLocation();
-  const year = new Date().getFullYear();
+const socialIcons: Record<string, (props: IconProps) => JSX.Element> = {
+  X: XIcon,
+  GitHub: GitHubIcon,
+  Email: EmailIcon,
+  LinkedIn: LinkedInIcon,
+};
 
-  return (
-    <div className="min-h-screen bg-site text-site">
-      <div className="mx-auto flex min-h-screen w-full max-w-6xl flex-col px-5 pb-10 pt-5 md:px-8 md:pb-14 md:pt-7">
-        <header className="sticky top-4 z-20 mb-10">
-          <div className="surface-shell flex flex-col gap-4 rounded-[28px] border border-site px-5 py-4 md:flex-row md:items-center md:justify-between md:rounded-full">
-            <div className="flex items-center gap-3">
-              <Link
-                to="/"
-                className="text-base font-semibold tracking-[-0.02em] text-site"
-              >
-                Pau Kuntong
-              </Link>
-              <span className="hidden text-xs text-soft md:inline">
-                Full-stack engineer, Washington DC
-              </span>
+const SiteLayout = ({ children }: { children: ReactNode }) => (
+  <div className="min-h-screen bg-site text-site">
+    <div className="mx-auto max-w-[1520px] px-6 py-8 lg:px-10">
+      <div className="lg:grid lg:grid-cols-[360px_minmax(0,1fr)] lg:gap-14">
+        <aside className="flex flex-col gap-8 lg:sticky lg:top-8 lg:h-[calc(100vh-4rem)] lg:border-r lg:border-site lg:pr-14">
+          <div className="space-y-8">
+            <div className="sidebar-photo-frame">
+              <img
+                src="/portrait-fisheye.png"
+                alt="Pau Kuntong"
+                className="sidebar-photo"
+              />
             </div>
-            <nav className="flex flex-wrap items-center gap-4 text-sm text-muted">
+
+            <nav className="space-y-4">
               {navItems.map((item) => {
-                const isActive = item.href === "/apps" && location.pathname === "/apps";
+                const Icon = item.icon;
 
                 return (
-                  <a
-                    key={item.href}
-                    href={item.href}
-                    className={isActive ? "text-site" : "transition-colors hover:text-site"}
+                  <NavLink
+                    key={item.to}
+                    to={item.to}
+                    end={item.end}
+                    className={({ isActive }) =>
+                      `sidebar-nav-item ${isActive ? "sidebar-nav-item-active" : ""}`
+                    }
                   >
-                    {item.label}
-                  </a>
+                    <Icon className="h-6 w-6 flex-none" />
+                    <span>{item.label}</span>
+                  </NavLink>
                 );
               })}
             </nav>
           </div>
-        </header>
 
-        <main className="flex-1">{children}</main>
+          <div className="flex gap-3 lg:mt-auto lg:pt-8">
+            {socialLinks.map((link) => {
+              const Icon = socialIcons[link.label];
 
-        <footer className="mt-16 border-t border-site pt-6">
-          <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
-            <div className="space-y-3">
-              <p className="text-sm text-muted">
-                Available for product work, front-end rebuilds, and mobile web
-                improvements.
-              </p>
-              <div className="flex flex-wrap gap-4 text-sm text-soft">
-                {socialLinks.map((link) => (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    target={link.href.startsWith("mailto:") ? undefined : "_blank"}
-                    rel={link.href.startsWith("mailto:") ? undefined : "noreferrer"}
-                    className="transition-colors hover:text-site"
-                  >
-                    {link.label}
-                  </a>
-                ))}
-              </div>
-            </div>
-            <div className="space-y-2 text-sm text-soft md:text-right">
-              <p>Rushing is the enemy of perfection - Rickson Gracie</p>
-              <p>(c) {year} Pau Kuntong</p>
-            </div>
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target={link.href.startsWith("mailto:") ? undefined : "_blank"}
+                  rel={link.href.startsWith("mailto:") ? undefined : "noreferrer"}
+                  className="social-dock-item"
+                  aria-label={link.label}
+                  title={link.label}
+                >
+                  {Icon ? <Icon className="h-5 w-5" /> : link.label.slice(0, 2)}
+                </a>
+              );
+            })}
           </div>
-        </footer>
+        </aside>
+
+        <main className="mt-12 min-w-0 lg:mt-0 lg:pl-2">{children}</main>
       </div>
     </div>
-  );
-};
+  </div>
+);
 
 export default SiteLayout;
