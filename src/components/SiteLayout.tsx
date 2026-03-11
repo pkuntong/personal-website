@@ -127,9 +127,9 @@ const socialIcons: Record<string, (props: IconProps) => JSX.Element> = {
 const SiteLayout = ({ children }: { children: ReactNode }) => (
   <div className="min-h-screen bg-site text-site">
     <div className="mx-auto max-w-[1520px] px-6 py-8 lg:px-10">
-      <div className="lg:grid lg:grid-cols-[360px_minmax(0,1fr)] lg:gap-14">
-        <aside className="flex flex-col gap-8 lg:sticky lg:top-8 lg:h-[calc(100vh-4rem)] lg:border-r lg:border-site lg:pr-14">
-          <div className="space-y-8">
+      <div className="lg:grid lg:grid-cols-[294px_minmax(0,1fr)] lg:gap-8">
+        <aside className="flex flex-col items-start gap-8 lg:sticky lg:top-8 lg:h-[calc(100vh-4rem)] lg:border-r lg:border-site lg:pr-9">
+          <div className="w-full space-y-6 lg:max-w-[14.35rem]">
             <div className="sidebar-photo-frame">
               <img
                 src="/portrait-fisheye.png"
@@ -138,7 +138,7 @@ const SiteLayout = ({ children }: { children: ReactNode }) => (
               />
             </div>
 
-            <nav className="space-y-4">
+            <nav className="space-y-3">
               {navItems.map((item) => {
                 const Icon = item.icon;
 
@@ -151,7 +151,7 @@ const SiteLayout = ({ children }: { children: ReactNode }) => (
                       `sidebar-nav-item ${isActive ? "sidebar-nav-item-active" : ""}`
                     }
                   >
-                    <Icon className="h-6 w-6 flex-none" />
+                    <Icon className="h-5 w-5 flex-none" />
                     <span>{item.label}</span>
                   </NavLink>
                 );
@@ -159,7 +159,7 @@ const SiteLayout = ({ children }: { children: ReactNode }) => (
             </nav>
           </div>
 
-          <div className="flex gap-3 lg:mt-auto lg:pt-8">
+          <div className="flex gap-3 lg:mt-auto lg:max-w-[14.35rem] lg:pt-8">
             {socialLinks.map((link) => {
               const Icon = socialIcons[link.label];
 
@@ -173,14 +173,14 @@ const SiteLayout = ({ children }: { children: ReactNode }) => (
                   aria-label={link.label}
                   title={link.label}
                 >
-                  {Icon ? <Icon className="h-5 w-5" /> : link.label.slice(0, 2)}
+                  {Icon ? <Icon className="h-[18px] w-[18px]" /> : link.label.slice(0, 2)}
                 </a>
               );
             })}
           </div>
         </aside>
 
-        <main className="mt-12 min-w-0 lg:mt-0 lg:pl-2">{children}</main>
+        <main className="mt-12 min-w-0 lg:mt-0 lg:pl-10">{children}</main>
       </div>
     </div>
   </div>
