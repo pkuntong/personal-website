@@ -131,7 +131,7 @@ const SiteLayout = ({ children }: { children: ReactNode }) => (
         <main className="mt-12 min-w-0 lg:mt-0 lg:pl-10">
           {children}
           <footer className="mt-12 border-t border-site pt-6 text-sm tracking-[-0.02em] text-[color:var(--site-muted)]">
-            Rushing is the enemy of perfection - Rickson Gracie
+            Rushing is the enemy of perfection — Rickson Gracie
           </footer>
         </main>
       </div>
