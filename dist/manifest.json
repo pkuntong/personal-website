@@ -1,11 +1,11 @@
 {
-  "name": "Pau Kuntong - Full-stack Engineer",
+  "name": "Pau Kuntong",
   "short_name": "Pau Kuntong",
-  "description": "Personal website of Pau Kuntong, a full-stack engineer focused on minimal, mobile-first product work.",
+  "description": "Pau Kuntong is a full-stack engineer building calm, native-feeling web products and focused software.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f7f3eb",
-  "theme_color": "#f7f3eb",
+  "background_color": "#050608",
+  "theme_color": "#050608",
   "orientation": "portrait-primary",
   "icons": [
     {

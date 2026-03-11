@@ -1,70 +1,50 @@
 import SiteLayout from "@/components/SiteLayout";
-
-const apps = [
-  {
-    name: "RizzGPT 1.0",
-    icon: "/apps/rizzgpt.png",
-    url: "https://apps.apple.com/us/app/rizzgpt-1-0/id6754542069",
-    description: "AI-powered conversation assistant that keeps things confident and clear.",
-  },
-  {
-    name: "LivyFlow",
-    icon: "/apps/livyflow.png",
-    url: "https://apps.apple.com/us/app/livyflow-zero-based-budgeting/id6755669004",
-    description: "Zero-based budgeting with simple, focused tracking.",
-  },
-  {
-    name: "Sales Journal Pro",
-    icon: "/apps/salesjournal.png",
-    url: "https://apps.apple.com/us/app/sales-journal-pro/id6755369489",
-    description: "Sales tracking and analytics for small teams and solo founders.",
-  },
-  {
-    name: "Smart Invoice Extract",
-    icon: "/apps/smartinvoice.png",
-    url: "https://apps.apple.com/us/app/smart-invoice-extract/id6755616919",
-    description: "Document processing that extracts invoice data automatically.",
-  },
-];
+import { appProjects } from "@/data/siteContent";
 
 const Apps = () => (
   <SiteLayout>
-    <section className="space-y-10 animate-fade-up">
-      <div className="space-y-3">
-        <p className="text-xs uppercase tracking-[0.32em] text-muted">Apps</p>
-        <h1 className="font-serif text-3xl tracking-tight md:text-4xl">
-          iOS app catalog
+    <section className="space-y-8">
+      <div className="surface-card section-fade rounded-[32px] p-7 md:p-10">
+        <p className="eyebrow">Apps</p>
+        <h1 className="mt-4 max-w-3xl text-4xl font-semibold tracking-[-0.06em] text-site md:text-6xl md:leading-[1]">
+          Utility apps built to{" "}
+          <span className="font-serif font-normal italic">
+            stay out of the way.
+          </span>
         </h1>
-        <p className="max-w-2xl text-sm text-muted md:text-base">
-          A small collection of focused iOS apps, each designed to solve a
-          specific problem with minimal friction.
+        <p className="mt-6 max-w-2xl text-base leading-7 text-muted md:text-lg">
+          These are focused iOS products built around a single clear job:
+          budgeting, document extraction, sales logging, or faster
+          communication. No filler, just useful workflows.
         </p>
       </div>
 
-      <div className="grid gap-4">
-        {apps.map((app) => (
+      <div className="grid gap-5 lg:grid-cols-2">
+        {appProjects.map((app, index) => (
           <a
             key={app.name}
             href={app.url}
             target="_blank"
             rel="noreferrer"
-            className="group rounded-2xl border border-ink bg-paper-soft p-4 transition hover:-translate-y-0.5 hover:border-accent hover:shadow-soft"
+            className="surface-card card-hover group flex flex-col gap-6 rounded-[28px] p-6 section-fade md:flex-row md:items-center"
+            style={{ animationDelay: `${index * 80}ms` }}
           >
-            <div className="flex gap-4">
+            <div className="flex h-24 w-24 items-center justify-center rounded-[28px] border border-site bg-site-raised">
               <img
                 src={app.icon}
-                alt={`${app.name} icon`}
-                className="h-14 w-14 rounded-2xl border border-ink object-cover"
+                alt={app.name}
+                className="h-20 w-20 rounded-[24px] shadow-2xl"
               />
-              <div className="space-y-1">
-                <h2 className="font-serif text-lg text-ink transition-colors group-hover:text-accent">
-                  {app.name}
-                </h2>
-                <p className="text-sm text-muted">{app.description}</p>
-                <span className="text-xs uppercase tracking-[0.2em] text-muted">
-                  View in App Store
-                </span>
-              </div>
+            </div>
+            <div className="space-y-3">
+              <span className="badge-pill">{app.label}</span>
+              <h2 className="text-2xl font-semibold tracking-[-0.04em] text-site transition-colors group-hover:text-accent">
+                {app.name}
+              </h2>
+              <p className="text-sm leading-6 text-muted md:text-base">
+                {app.description}
+              </p>
+              <span className="text-sm text-soft">Open in the App Store</span>
             </div>
           </a>
         ))}

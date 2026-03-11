@@ -1,23 +1,19 @@
-import { Link } from "react-router-dom";
 import SiteLayout from "@/components/SiteLayout";
 
 const NotFound = () => (
   <SiteLayout>
-    <section className="space-y-4 animate-fade-up">
-      <p className="text-xs uppercase tracking-[0.32em] text-muted">404</p>
-      <h1 className="font-serif text-3xl tracking-tight md:text-4xl">
-        Page not found
+    <section className="surface-card section-fade rounded-[32px] p-8 md:p-10">
+      <p className="eyebrow">404</p>
+      <h1 className="mt-4 text-4xl font-semibold tracking-[-0.06em] text-site md:text-6xl">
+        This page is not here.
       </h1>
-      <p className="text-sm text-muted">
-        The page you are looking for does not exist. The home page should get
-        you back on track.
+      <p className="mt-5 max-w-xl text-base leading-7 text-muted md:text-lg">
+        The route does not exist. Use the navigation above or head back to the
+        homepage.
       </p>
-      <Link
-        to="/"
-        className="text-sm font-medium text-accent transition-colors hover:text-ink"
-      >
+      <a href="/" className="action-pill mt-8 inline-flex">
         Return home
-      </Link>
+      </a>
     </section>
   </SiteLayout>
 );

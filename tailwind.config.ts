@@ -20,8 +20,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['\"Space Grotesk\"', 'sans-serif'],
-				serif: ['\"Newsreader\"', 'serif'],
+				sans: ["Manrope", "sans-serif"],
+				serif: ["Instrument Serif", "serif"],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -97,5 +97,5 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [],
 } satisfies Config;
