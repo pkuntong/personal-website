@@ -42,30 +42,6 @@ const ProjectsIcon = ({ className = "" }: IconProps) => (
   </svg>
 );
 
-const BlogIcon = ({ className = "" }: IconProps) => (
-  <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
-    <rect x="5" y="4.5" width="14" height="15" rx="2" stroke="currentColor" strokeWidth="1.8" />
-    <path
-      d="M9 9h6M9 12.5h6M9 16h3"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-    />
-  </svg>
-);
-
-const ArtIcon = ({ className = "" }: IconProps) => (
-  <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
-    <path
-      d="m6 18 8.8-8.8 3 3L9 21H6v-3ZM14.1 7.1l1.8-1.8a2.2 2.2 0 1 1 3.1 3.1l-1.8 1.8-3.1-3.1Z"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-);
-
 const XIcon = ({ className = "" }: IconProps) => (
   <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
     <path
@@ -113,8 +89,6 @@ const navItems = [
   { label: "Home", to: "/", icon: HomeIcon, end: true },
   { label: "Resume", to: "/resume", icon: ResumeIcon },
   { label: "Projects", to: "/projects", icon: ProjectsIcon },
-  { label: "Blog", to: "/blog", icon: BlogIcon },
-  { label: "Art", to: "/art", icon: ArtIcon },
 ];
 
 const socialIcons: Record<string, (props: IconProps) => JSX.Element> = {
@@ -180,7 +154,12 @@ const SiteLayout = ({ children }: { children: ReactNode }) => (
           </div>
         </aside>
 
-        <main className="mt-12 min-w-0 lg:mt-0 lg:pl-10">{children}</main>
+        <main className="mt-12 min-w-0 lg:mt-0 lg:pl-10">
+          {children}
+          <footer className="mt-12 border-t border-site pt-6 text-sm tracking-[-0.02em] text-[color:var(--site-muted)]">
+            Rushing is the enemy of perfection - Rickson Gracie
+          </footer>
+        </main>
       </div>
     </div>
   </div>
