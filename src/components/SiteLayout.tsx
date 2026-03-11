@@ -1,22 +1,9 @@
 import type { JSX, ReactNode } from "react";
-import { NavLink } from "react-router-dom";
 import { socialLinks } from "@/data/siteContent";
 
 type IconProps = {
   className?: string;
 };
-
-const HomeIcon = ({ className = "" }: IconProps) => (
-  <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
-    <path
-      d="M4 11.8 12 5l8 6.8v7.2a1 1 0 0 1-1 1h-4.8v-5.2H9.8V20H5a1 1 0 0 1-1-1v-7.2Z"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-);
 
 const XIcon = ({ className = "" }: IconProps) => (
   <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
@@ -61,10 +48,6 @@ const LinkedInIcon = ({ className = "" }: IconProps) => (
   </svg>
 );
 
-const navItems = [
-  { label: "Home", to: "/", icon: HomeIcon, end: true },
-];
-
 const socialIcons: Record<string, (props: IconProps) => JSX.Element> = {
   X: XIcon,
   GitHub: GitHubIcon,
@@ -85,26 +68,6 @@ const SiteLayout = ({ children }: { children: ReactNode }) => (
                 className="sidebar-photo"
               />
             </div>
-
-            <nav className="space-y-3">
-              {navItems.map((item) => {
-                const Icon = item.icon;
-
-                return (
-                  <NavLink
-                    key={item.to}
-                    to={item.to}
-                    end={item.end}
-                    className={({ isActive }) =>
-                      `sidebar-nav-item ${isActive ? "sidebar-nav-item-active" : ""}`
-                    }
-                  >
-                    <Icon className="h-5 w-5 flex-none" />
-                    <span>{item.label}</span>
-                  </NavLink>
-                );
-              })}
-            </nav>
           </div>
 
           <div className="flex gap-3 lg:mt-auto lg:max-w-[14.35rem] lg:pt-8">
