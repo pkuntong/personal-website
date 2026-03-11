@@ -92,15 +92,15 @@
 
   .sidebar-photo {
     width: 100%;
-    aspect-ratio: 1 / 1.08;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
-    object-position: center 24%;
+    object-position: center 20%;
     filter: grayscale(1) contrast(1.03) brightness(0.96);
   }
 
   .sidebar-nav-item {
     display: flex;
-    min-height: 5.5rem;
+    min-height: 5rem;
     align-items: center;
     gap: 1rem;
     border-radius: 1.75rem;
@@ -108,7 +108,7 @@
     background: linear-gradient(180deg, rgba(20, 20, 20, 0.96), rgba(10, 10, 10, 0.96));
     padding: 0 1.65rem;
     color: var(--site-muted);
-    font-size: 1.45rem;
+    font-size: 1.28rem;
     font-weight: 500;
     letter-spacing: -0.03em;
     transition:
@@ -139,8 +139,8 @@
 
   .social-dock-item {
     display: inline-flex;
-    height: 4.75rem;
-    width: 4.75rem;
+    height: 4.2rem;
+    width: 4.2rem;
     align-items: center;
     justify-content: center;
     border-radius: 1.5rem;
@@ -167,7 +167,7 @@
 
   .page-title {
     color: var(--site-text);
-    font-size: clamp(3.2rem, 7.2vw, 6.2rem);
+    font-size: clamp(2.7rem, 5.4vw, 5.1rem);
     font-weight: 500;
     letter-spacing: -0.075em;
     line-height: 0.95;
@@ -176,7 +176,7 @@
   .page-roles {
     margin-top: 2.5rem;
     color: var(--site-muted);
-    font-size: clamp(1.2rem, 1.8vw, 1.95rem);
+    font-size: clamp(1rem, 1.25vw, 1.45rem);
     letter-spacing: -0.03em;
     line-height: 1.45;
   }
@@ -189,9 +189,9 @@
 
   .copy-stack p {
     color: var(--site-copy);
-    font-size: clamp(1.55rem, 1.8vw, 2.1rem);
-    letter-spacing: -0.035em;
-    line-height: 1.48;
+    font-size: clamp(1.14rem, 1.08vw, 1.42rem);
+    letter-spacing: -0.02em;
+    line-height: 1.7;
   }
 
   .accent-link {
@@ -211,7 +211,7 @@
 
   .section-title {
     color: var(--site-text);
-    font-size: clamp(2.4rem, 4.6vw, 3.8rem);
+    font-size: clamp(2rem, 3vw, 2.8rem);
     font-weight: 500;
     letter-spacing: -0.065em;
     line-height: 0.96;
@@ -221,7 +221,7 @@
     margin-top: 1rem;
     max-width: 46rem;
     color: var(--site-muted);
-    font-size: clamp(1.15rem, 1.55vw, 1.5rem);
+    font-size: clamp(1rem, 1.1vw, 1.18rem);
     letter-spacing: -0.025em;
     line-height: 1.6;
   }
@@ -266,7 +266,7 @@
   .detail-heading {
     margin-bottom: 0.7rem;
     color: var(--site-text);
-    font-size: clamp(1.4rem, 1.85vw, 1.95rem);
+    font-size: clamp(1.2rem, 1.3vw, 1.5rem);
     font-weight: 500;
     letter-spacing: -0.045em;
     line-height: 1.08;
