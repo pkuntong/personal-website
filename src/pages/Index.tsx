@@ -3,12 +3,12 @@ import SiteLayout from "@/components/SiteLayout";
 import { featuredWork, fieldNotes } from "@/data/siteContent";
 
 const visualClasses = [
-  "from-[#15171d] via-[#1c2027] to-[#0e3031]",
-  "from-[#17171a] via-[#20242e] to-[#2c1c1d]",
-  "from-[#101114] via-[#1a1f29] to-[#1f2a20]",
-  "from-[#141417] via-[#23232a] to-[#2d1f16]",
-  "from-[#111216] via-[#181d26] to-[#2f2431]",
-  "from-[#121318] via-[#1d2028] to-[#1c302a]",
+  "from-[#0c0d0f] via-[#17181c] to-[#2a2c31]",
+  "from-[#111214] via-[#1a1c20] to-[#30343a]",
+  "from-[#090a0d] via-[#16181d] to-[#24272d]",
+  "from-[#0d0e10] via-[#1b1d22] to-[#35383d]",
+  "from-[#0f1013] via-[#1d2025] to-[#292c31]",
+  "from-[#0b0c0f] via-[#17191e] to-[#31353b]",
 ];
 
 const Index = () => (
@@ -49,11 +49,11 @@ const Index = () => (
 
       <div className="grid gap-6">
         <div className="surface-card section-fade rounded-[32px] p-4">
-          <div className="overflow-hidden rounded-[28px] border border-site">
+          <div className="overflow-hidden rounded-[28px] border border-site bg-black">
             <img
-              src="/profile.jpeg"
+              src="/portrait-fisheye.png"
               alt="Pau Kuntong"
-              className="h-[420px] w-full object-cover object-center"
+              className="h-[420px] w-full object-cover object-center grayscale contrast-125 brightness-110"
             />
           </div>
         </div>
@@ -106,7 +106,7 @@ const Index = () => (
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="h-24 w-24 rounded-[28px] border border-white/10 shadow-2xl"
+                  className="h-24 w-24 rounded-[28px] border border-white/10 shadow-2xl grayscale"
                 />
               ) : (
                 <span className="text-5xl font-semibold tracking-[-0.06em] text-site">

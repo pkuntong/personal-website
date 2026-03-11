@@ -4,17 +4,17 @@
 
 @layer base {
   :root {
-    --site-bg: #050608;
-    --site-surface: rgba(16, 18, 22, 0.88);
-    --site-surface-soft: rgba(21, 24, 30, 0.76);
-    --site-shell: rgba(11, 13, 17, 0.9);
-    --site-raised: #141820;
-    --site-text: #f5f1ea;
-    --site-muted: #b7b1a7;
-    --site-soft: #8f897f;
-    --site-line: rgba(255, 255, 255, 0.1);
-    --site-accent: #9ce8d1;
-    --site-accent-strong: #dffcf4;
+    --site-bg: #040404;
+    --site-surface: rgba(13, 13, 14, 0.9);
+    --site-surface-soft: rgba(19, 19, 20, 0.8);
+    --site-shell: rgba(8, 8, 9, 0.92);
+    --site-raised: #121212;
+    --site-text: #f3f3f1;
+    --site-muted: #bdbdb7;
+    --site-soft: #8f8f89;
+    --site-line: rgba(255, 255, 255, 0.12);
+    --site-accent: #f0f0ec;
+    --site-accent-strong: #ffffff;
 
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
@@ -48,10 +48,10 @@
     inset: 0;
     z-index: -2;
     background:
-      radial-gradient(circle at top left, rgba(116, 181, 255, 0.14), transparent 28%),
-      radial-gradient(circle at 80% 18%, rgba(150, 232, 209, 0.12), transparent 32%),
-      radial-gradient(circle at bottom, rgba(255, 208, 140, 0.08), transparent 36%),
-      linear-gradient(180deg, #08090b 0%, #050608 100%);
+      radial-gradient(circle at top left, rgba(255, 255, 255, 0.08), transparent 28%),
+      radial-gradient(circle at 80% 18%, rgba(255, 255, 255, 0.05), transparent 32%),
+      radial-gradient(circle at bottom, rgba(255, 255, 255, 0.04), transparent 36%),
+      linear-gradient(180deg, #090909 0%, #040404 100%);
   }
 
   body::after {
@@ -86,7 +86,7 @@
   }
 
   ::selection {
-    background: rgba(156, 232, 209, 0.25);
+    background: rgba(255, 255, 255, 0.18);
     color: var(--site-text);
   }
 }
@@ -182,8 +182,8 @@
   }
 
   .action-pill-primary {
-    background: linear-gradient(135deg, rgba(156, 232, 209, 0.18), rgba(156, 232, 209, 0.08));
-    border-color: rgba(156, 232, 209, 0.25);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.05));
+    border-color: rgba(255, 255, 255, 0.24);
     color: var(--site-accent-strong);
   }
 
@@ -195,7 +195,7 @@
   }
 
   .card-hover:hover {
-    border-color: rgba(156, 232, 209, 0.24);
+    border-color: rgba(255, 255, 255, 0.22);
     transform: translateY(-4px);
   }
 

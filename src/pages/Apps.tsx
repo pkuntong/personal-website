@@ -33,7 +33,7 @@ const Apps = () => (
               <img
                 src={app.icon}
                 alt={app.name}
-                className="h-20 w-20 rounded-[24px] shadow-2xl"
+                className="h-20 w-20 rounded-[24px] shadow-2xl grayscale"
               />
             </div>
             <div className="space-y-3">
